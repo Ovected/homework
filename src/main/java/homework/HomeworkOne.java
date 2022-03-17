@@ -4,34 +4,15 @@ public class HomeworkOne {
     public static void main(String[] args) {
         variable();
         float z = doMath(2.3f, 4.5f, 47.3f, 3f);
-        int cs = checkSum(2, 19);
-        int in = integer(0);
+        boolean boo = checkSum(2, 19);
+        checkPositive(-3);
         int tf = trueFalse(-21);
-        //int ye = (2020);
-
-
-       String a = greetings ("привет,");
-        a += "Ваня";
-
-
+        greetings("Ваня");
+        isLeapYear(2011);
+        isLeapYear(1100);
 
         System.out.println(z);
-
-        if (cs >= 10 && cs <= 20) System.out.println("верно");
-        else if (cs < 10) System.out.println("неверно");
-        else if (cs > 20) System.out.println("неверно");
-
-
-        if (in <= 127 && in >= 0) System.out.println("положительное");
-        else if (in >= -128 && in <= -1) System.out.println("отрицательное");
-
-        if (tf > 0) System.out.println(false);
-        else if (tf < 0) System.out.println(true);
-
-
-        System.out.println(a);
-
-
+        System.out.println(boo);
 
     }
 
@@ -55,24 +36,44 @@ public class HomeworkOne {
         return (a * (b + (c / d)));
     }
 
-    public static int checkSum(int a, int b) {
+    public static boolean checkSum(int a, int b) {
+        int sum = a + b;
 
-        return (a + b);
+        return sum >= 10 && sum <= 20;
+
     }
-    public static int integer(int a) {
+
+    public static void checkPositive(int a) {
+
+        boolean b = a >= 0;
+        if (b) {
+            System.out.println("положительное");
+        } else {
+            System.out.println("отрицательное");
+        }
+
+    }
+
+
+    public static int trueFalse(int a) {
 
         return a;
     }
-    public static int trueFalse(int a){
 
-        return a;
-    }
-    public static String greetings(String a) {
+    public static void greetings(String name) {
 
-        return (a);
+        System.out.println("Hi, " + name + "!");
+
     }
 
+    public static void isLeapYear(int year) {
 
+        if ((year % 4 == 0 && year % 400 == 0) || year % 100 != 0) {
+            System.out.println("год" + year + "Високосный");
+        } else {
+            System.out.println("год" + year + "Невисокосный");
+        }
+    }
 
 }
 
