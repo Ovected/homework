@@ -6,13 +6,9 @@ public class HomeworkOne {
         float z = doMath(2.3f, 4.5f, 47.3f, 3f);
         boolean boo = checkSum(2, 19);
         checkPositive(-3);
-        int tf = trueFalse(-21);
+        trueFalse(1);
         greetings("Ваня");
-        isLeapYear(2011);
-        isLeapYear(1100);
-
-        System.out.println(z);
-        System.out.println(boo);
+        isLeapYear(2024);
 
     }
 
@@ -55,9 +51,8 @@ public class HomeworkOne {
     }
 
 
-    public static int trueFalse(int a) {
-
-        return a;
+    public static void trueFalse(int a) {
+        System.out.println(a <= 0);
     }
 
     public static void greetings(String name) {
@@ -68,14 +63,9 @@ public class HomeworkOne {
 
     public static void isLeapYear(int year) {
 
-        if ((year % 4 == 0 && year % 400 == 0) || year % 100 != 0) {
-            System.out.println("год" + year + "Високосный");
-        } else {
-            System.out.println("год" + year + "Невисокосный");
-        }
+        if (year % 100 != 0 && year % 4 == 0 || year % 400 ==0) {
+            System.out.println("год " + year + " Високосный");
+        } else
+            System.out.println("год " + year + " Невисокосный");
     }
-
 }
-
-
-
